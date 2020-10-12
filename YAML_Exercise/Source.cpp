@@ -5,7 +5,8 @@
 
 
 
-int main() {
+int main() 
+{
 	LevelData levelData;
 	int levelNr = 1;
 	LevelLoader::load(levelNr, levelData);
