@@ -1,0 +1,49 @@
+# Additional reading here: https://github.com/Animosity/CraftIRC/wiki/Complete-idiot's-introduction-to-yaml
+# The hash symbol is used to add comments
+# Yaml essentially maps keys (nodes) to values
+#
+# Example 1:
+# name : Mario
+#
+# Here, name is a key that maps to value Mario (a scalar value)
+# A key can also be another map of key-value pairs
+#
+# Example 2:
+# player:
+#   name: Mario
+#   xp: 0
+#
+# Here, player maps to 2 different mappings (the key 'name' to the value 'Mario' and xp to 0)
+# The key-value pairs show above must have at least one more SPACE character than the key.
+# This could also be written as:
+#
+# player : {name: Mario, xp: 0}
+#
+# Anything that has a colon (:) as a suffix identifies a Yaml Node
+#
+# E.g. player, name, xp, enemy, etc. are all Yaml nodes
+# player is a mapping 
+player:
+   name: Mario # This is a mapping of name: to Mario, where Mario is a scalar value
+   xp: 0       # Another mapping, 0 is another scalar value
+enemy:
+   type: Ghost
+   health: 10
+   position: {x: 100, y: 100}
+
+# YAML also supports Sequences a.k.a Lists
+# Lists are used to store a collection of ordered values
+# Each entry in a sequence is prefixed with a '-' 
+# It is possible to have a sequence of maps inside a list, here is an example:
+enemies:
+   - type: Ghost
+     health: 10
+     position: {x: 100, y: 100}
+   - type: Ghost
+     health: 20
+     position: {x: 200, y: 100}
+
+# Like key-value pairs, all list items must have the same amount of spaces prefixing them 
+# (at least as many spaces as the parent key) 
+# Each list item is defined by a positional index obtained from the order in 
+#  which they are specified, e.g. list item 1, list item 2 etc.
