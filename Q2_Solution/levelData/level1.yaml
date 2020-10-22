@@ -1,0 +1,13 @@
+tanks:
+   - position: {x: 100, y: 100}
+     scale: 1
+     rotation: 0
+   - position: {x: 200, y: 200}
+     scale: 1.5
+     rotation: 45
+   - position: {x: 300, y: 300}
+     scale: 2
+     rotation: 90
+   - position: {x: 400, y: 400}
+     scale: 2.5
+     rotation: 180
